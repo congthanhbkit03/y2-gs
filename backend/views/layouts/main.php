@@ -37,7 +37,7 @@ AppAsset::register($this);
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Sàn giao dịch bất động sản Quảng Ngãi!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Trung tâm Gia sư Quảng Ngãi!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -59,17 +59,21 @@ AppAsset::register($this);
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
-                <h3>General</h3>
+                <h3>Chức năng</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  
+                  <li><a><i class="fa fa-edit"></i> Cơ sở <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo Yii::$app->homeUrl.'thongke'; ?>">Thống kê</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'khuvuc'; ?>">Khu vực</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'caphoc'; ?>">Cấp học</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'monhoc'; ?>">Môn học</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Bất động sản <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bell"></i> Chính năng chính <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo Yii::$app->homeUrl.'loaibds'; ?>">Loại BĐS</a></li>
-                      <li><a href="<?php echo Yii::$app->homeUrl.'bds'; ?>">Bất động sản</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'lopday'; ?>">Lớp dạy</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'giasu'; ?>">Gia sư</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'phancong'; ?>">Phân công</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Người dùng <span class="fa fa-chevron-down"></span></a>
@@ -79,8 +83,8 @@ AppAsset::register($this);
                   </li>
                   <li><a><i class="fa fa-check-square-o"></i> Chờ duyệt <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo Yii::$app->homeUrl.'user'; ?>">Thành viên đăng ký</a></li>
-                      <li><a href="<?php echo Yii::$app->homeUrl.'user'; ?>">Đăng tin bất động sản</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'user'; ?>">Gia sư đăng ký</a></li>
+                      <li><a href="<?php echo Yii::$app->homeUrl.'user'; ?>">Gia sư chọn lớp</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Booking <span class="fa fa-chevron-down"></span></a>
