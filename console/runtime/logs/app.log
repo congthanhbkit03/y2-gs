@@ -1,0 +1,1151 @@
+2018-07-26 07:09:38 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1005 Can't create table `yii2`.`#sql-1944_3c` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `ca...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(51): yii\db\Migration->addForeignKey('fk_car_type', 'car', 'type_id', 'car_type', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1005 Can't create table `yii2`.`#sql-1944_3c` (errno: 150 "Foreign key constraint is incorrectly formed")
+The SQL being executed was: ALTER TABLE `car` ADD CONSTRAINT `fk_car_type` FOREIGN KEY (`type_id`) REFERENCES `car_type` (`id`) in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `ca...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `ca...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(51): yii\db\Migration->addForeignKey('fk_car_type', 'car', 'type_id', 'car_type', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1005
+    [2] => Can't create table `yii2`.`#sql-1944_3c` (errno: 150 "Foreign key constraint is incorrectly formed")
+)
+
+2018-07-26 07:09:33 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532588973.1702
+    'REQUEST_TIME' => 1532588973
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:15:44 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists
+The SQL being executed was: CREATE TABLE `car` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int(11),
+	`color` varchar(32) NOT NULL,
+	`brand` varchar(255) NOT NULL,
+	`model` varchar(255) UNIQUE,
+	`purchDate` int(11),
+	`description` int(11) NOT NULL,
+	`owner_id` int(11),
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `c...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'car' already exists
+)
+
+2018-07-26 07:15:42 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532589342.5382
+    'REQUEST_TIME' => 1532589342
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:30:08 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1005 Can't create table `yii2`.`#sql-1944_4e` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `ca...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(52): yii\db\Migration->addForeignKey('fk_car_owner', 'car', 'owner_id', 'owner', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1005 Can't create table `yii2`.`#sql-1944_4e` (errno: 150 "Foreign key constraint is incorrectly formed")
+The SQL being executed was: ALTER TABLE `car` ADD CONSTRAINT `fk_car_owner` FOREIGN KEY (`owner_id`) REFERENCES `owner` (`id`) in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `ca...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `ca...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(52): yii\db\Migration->addForeignKey('fk_car_owner', 'car', 'owner_id', 'owner', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1005
+    [2] => Can't create table `yii2`.`#sql-1944_4e` (errno: 150 "Foreign key constraint is incorrectly formed")
+)
+
+2018-07-26 07:30:03 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532590203.8675
+    'REQUEST_TIME' => 1532590203
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:33:29 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists
+The SQL being executed was: CREATE TABLE `car` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int(11),
+	`color` varchar(32) NOT NULL,
+	`brand` varchar(255) NOT NULL,
+	`model` varchar(255) UNIQUE,
+	`purchDate` int(11),
+	`description` int(11) NOT NULL,
+	`owner_id` int(11),
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `c...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'car' already exists
+)
+
+2018-07-26 07:33:26 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532590406.9859
+    'REQUEST_TIME' => 1532590406
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:33:42 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists
+The SQL being executed was: CREATE TABLE `car` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int(11),
+	`color` varchar(32) NOT NULL,
+	`brand` varchar(255) NOT NULL,
+	`model` varchar(255) UNIQUE,
+	`purchDate` int(11),
+	`description` int(11) NOT NULL,
+	`owner_id` int(11),
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `c...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'car' already exists
+)
+
+2018-07-26 07:33:40 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532590420.5361
+    'REQUEST_TIME' => 1532590420
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:34:29 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'car' already exists
+The SQL being executed was: CREATE TABLE `car` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`type_id` int(11),
+	`color` varchar(32) NOT NULL,
+	`brand` varchar(255) NOT NULL,
+	`model` varchar(255) UNIQUE,
+	`purchDate` int(11),
+	`description` int(11) NOT NULL,
+	`owner_id` int(11),
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `c...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('CREATE TABLE `c...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(323): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(50): yii\db\Migration->createTable('{{%car}}', Array, 'CHARACTER SET u...')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'car' already exists
+)
+
+2018-07-26 07:34:21 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532590461.4032
+    'REQUEST_TIME' => 1532590461
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:36:54 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1005 Can't create table `yii2`.`#sql-1944_6c` (errno: 150 "Foreign key constraint is incorrectly formed") in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `ca...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(52): yii\db\Migration->addForeignKey('fk_car_owner', 'car', 'owner_id', 'owner', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1005 Can't create table `yii2`.`#sql-1944_6c` (errno: 150 "Foreign key constraint is incorrectly formed")
+The SQL being executed was: ALTER TABLE `car` ADD CONSTRAINT `fk_car_owner` FOREIGN KEY (`owner_id`) REFERENCES `owner` (`id`) in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `ca...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `ca...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043003_car.php(52): yii\db\Migration->addForeignKey('fk_car_owner', 'car', 'owner_id', 'owner', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_car->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1005
+    [2] => Can't create table `yii2`.`#sql-1944_6c` (errno: 150 "Foreign key constraint is incorrectly formed")
+)
+
+2018-07-26 07:36:46 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532590606.9832
+    'REQUEST_TIME' => 1532590606
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:39:56 [-][-][-][error][ReflectionException] ReflectionException: Class m180724_042439_owner does not exist in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\di\Container.php:428
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\di\Container.php(428): ReflectionClass->__construct('m180724_042439_...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\di\Container.php(364): yii\di\Container->getDependencies('m180724_042439_...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('m180724_042439_...', Array, Array)
+#3 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('m180724_042439_...', Array, Array)
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\MigrateController.php(201): yii\BaseYii::createObject(Array)
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(724): yii\console\controllers\MigrateController->createMigration('m180724_042439_...')
+#6 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_042439_...')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#14 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#16 {main}
+2018-07-26 07:39:53 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532590793.646
+    'REQUEST_TIME' => 1532590793
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-07-26 07:41:30 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1280 Incorrect index name 'fk_res_cus ' in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php:1258
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1258): PDOStatement->execute()
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `re...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043056_reservation.php(51): yii\db\Migration->addForeignKey('fk_res_cus ', 'reservation', 'customer_id', 'customer', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043056_reservation->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043056_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1280 Incorrect index name 'fk_res_cus '
+The SQL being executed was: ALTER TABLE `reservation` ADD CONSTRAINT `fk_res_cus ` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) in D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1263): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `re...')
+#1 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Command.php(1075): yii\db\Command->internalExecute('ALTER TABLE `re...')
+#2 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\db\Migration.php(467): yii\db\Command->execute()
+#3 D:\xampp\htdocs\yii2\yii-application\console\migrations\m180724_043056_reservation.php(51): yii\db\Migration->addForeignKey('fk_res_cus ', 'reservation', 'customer_id', 'customer', 'id')
+#4 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043056_reservation->up()
+#5 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043056_...')
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#7 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#12 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\yii-application\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 D:\xampp\htdocs\yii2\yii-application\yii(23): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1280
+    [2] => Incorrect index name 'fk_res_cus '
+)
+
+2018-07-26 07:41:24 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1532590884.1305
+    'REQUEST_TIME' => 1532590884
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-09-06 09:25:32 [-][-][-][error][ReflectionException] ReflectionException: Class m180724_042953_loai does not exist in D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\di\Container.php:428
+Stack trace:
+#0 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\di\Container.php(428): ReflectionClass->__construct('m180724_042953_...')
+#1 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\di\Container.php(364): yii\di\Container->getDependencies('m180724_042953_...')
+#2 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('m180724_042953_...', Array, Array)
+#3 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('m180724_042953_...', Array, Array)
+#4 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\controllers\MigrateController.php(201): yii\BaseYii::createObject(Array)
+#5 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(724): yii\console\controllers\MigrateController->createMigration('m180724_042953_...')
+#6 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_042953_...')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#8 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#11 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#12 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#13 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#14 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 D:\xampp\htdocs\yii2\bds\yii(23): yii\base\Application->run()
+#16 {main}
+2018-09-06 09:25:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1536225920.1635
+    'REQUEST_TIME' => 1536225920
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-09-06 09:27:19 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: m180724_043003_bds::interger() in D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\Component.php:300
+Stack trace:
+#0 D:\xampp\htdocs\yii2\bds\console\migrations\m180724_043003_bds.php(54): yii\base\Component->__call('interger', Array)
+#1 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(725): m180724_043003_bds->up()
+#2 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(199): yii\console\controllers\BaseMigrateController->migrateUp('m180724_043003_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#7 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#8 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 D:\xampp\htdocs\yii2\bds\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 D:\xampp\htdocs\yii2\bds\yii(23): yii\base\Application->run()
+#12 {main}
+2018-09-06 09:27:17 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\buithanh\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'THANHBC'
+    'ComSpec' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'DriverData' => 'C:\\Windows\\System32\\Drivers\\DriverData'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\buithanh'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.8.0_111'
+    'LOCALAPPDATA' => 'C:\\Users\\buithanh\\AppData\\Local'
+    'LOGONSERVER' => '\\\\THANHBC'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OneDrive' => 'F:\\OneDrive'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\Java\\jdk1.8.0_111\\bin;C:\\Emgu\\emgucv-windesktop 3.2.0.2682\\bin;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Python27\\Scripts;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;D:\\xampp\\php;;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Users\\buithanh\\AppData\\Local\\Microsoft\\WindowsApps;D:\\xampp\\php\\;C:\\Users\\buithanh\\AppData\\Roaming\\npm;C:\\Python27;C:\\Users\\buithanh\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\buithanh\\AppData\\Roaming\\Composer\\vendor\\bin'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 61 Stepping 4, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3d04'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PSModulePath' => 'C:\\Users\\buithanh\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'TEMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\buithanh\\AppData\\Local\\Temp'
+    'USERDOMAIN' => 'thanhbc'
+    'USERDOMAIN_ROAMINGPROFILE' => 'thanhbc'
+    'USERNAME' => 'buithanh'
+    'USERPROFILE' => 'C:\\Users\\buithanh'
+    'VBOX_MSI_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\WINDOWS'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1536226037.2084
+    'REQUEST_TIME' => 1536226037
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
