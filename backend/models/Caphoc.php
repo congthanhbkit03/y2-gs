@@ -61,4 +61,9 @@ class Caphoc extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Lopday::className(), ['caphoc_id' => 'id']);
     }
+
+    function getAll(){
+        $data = Caphoc::find()->asArray()->all();
+        return $data;
+    }
 }

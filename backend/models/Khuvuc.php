@@ -61,4 +61,9 @@ class Khuvuc extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Lopday::className(), ['khuvuc_id' => 'id']);
     }
+
+    function getAll(){
+        $data = Khuvuc::find()->asArray()->all();
+        return $data;
+    }
 }
