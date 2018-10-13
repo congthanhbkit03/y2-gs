@@ -19,9 +19,11 @@ use yii\widgets\ActiveForm;
 	    <?= $form->field($model, 'email') ?>
 
 	    <?= $form->field($model, 'password')->passwordInput() ?>
-	    <?= $form->field($model, 'role')->textInput() ?>
+	    <?= $form->field($model, 'role')->dropDownList(
+                $roles) ?>
 
-	    <?= $form->field($model, 'status')->textInput() ?>
+	    <?= $form->field($model, 'status')->dropDownList(
+                $status) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

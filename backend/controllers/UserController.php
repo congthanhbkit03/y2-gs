@@ -66,7 +66,15 @@ class UserController extends Controller
     {
         $model = new User();
         $model->password = "";
-
+        $roles = [
+            "5" => "Người học / phụ huynh",
+            "10" => "Gia sư",
+            "20" => "Quản trị"
+        ];
+        $status = [
+            "0" => "Không hoạt động",
+            "10" => "Đang hoạt động"
+        ];
         if ($model->load(Yii::$app->request->post())) {
 
             if ($model->validate()){
@@ -80,7 +88,7 @@ class UserController extends Controller
         }
 
         return $this->render('create', [
-            'model' => $model,
+            'model' => $model, 'roles' => $roles, 'status' => $status
         ]);
     }
 
@@ -95,7 +103,15 @@ class UserController extends Controller
     {
         $model = $this->findModel($id);
         $model->password = "";
-
+        $roles = [
+            "5" => "Người học / phụ huynh",
+            "10" => "Gia sư",
+            "20" => "Quản trị"
+        ];
+        $status = [
+            "0" => "Không hoạt động",
+            "10" => "Đang hoạt động"
+        ];
         if ($model->load(Yii::$app->request->post()) ) {
 
             if ($model->validate()){
@@ -108,7 +124,7 @@ class UserController extends Controller
         }
 
         return $this->render('update', [
-            'model' => $model,
+            'model' => $model, 'roles' => $roles, 'status' => $status
         ]);
     }
 
