@@ -56,4 +56,8 @@ $(document).ready(function(){
 			'src': imgSrc
 		});
 	});
+
+	// $('#checkAll').change(function(){
+ //      $('.mh').prop('checked',this.checked?'checked':'');
+ //    })
 })

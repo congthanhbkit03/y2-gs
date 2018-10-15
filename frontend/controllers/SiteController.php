@@ -13,8 +13,8 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\Contact;
-use frontend\models\Loaibds;
-use frontend\models\Bds;
+
+use frontend\models\Lopday;
 /**
  * Site controller
  */
@@ -75,13 +75,11 @@ class SiteController extends Controller
     public function actionIndex()
     {
         //hien thi tat ca cac loai bds - sau do moi loai se hien thi 4 san pham bds tuong ung
-        $loaibds = new Loaibds();
-        $data = $loaibds->getAllLoaibds();
-        // $randombds = new Bds();
-        // $data = $randombds->getRandomBds(8);
-        return $this->render('index', ['dataloai' => $data]);
+        //$loaibds = new Loaibds();
+        //$data = $loaibds->getAllLoaibds();
+        
+        return $this->render('index');
     }
-
     /**
      * Logs in a user.
      *

@@ -4,10 +4,14 @@ namespace backend\controllers;
 
 use Yii;
 use backend\models\Lopday;
+use backend\models\Caphoc;
+use backend\models\Monhoc;
+use backend\models\Khuvuc;
 use backend\models\LopdaySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
 /**
  * LopdayController implements the CRUD actions for Lopday model.
@@ -65,13 +69,25 @@ class LopdayController extends Controller
     public function actionCreate()
     {
         $model = new Lopday();
+        $mMH = new Monhoc();
+        $mKV = new Khuvuc();
+        $mCH = new Caphoc();
 
+        $datamh = ArrayHelper::map($mMH->getAll(), 'id', 'monhoc');
+        $datakv = ArrayHelper::map($mKV->getAll(), 'id', 'khuvuc');
+        $datach = ArrayHelper::map($mCH->getAll(), 'id', 'caphoc');
+        
+        $datatt = ["0" => "Chua kich hoat", "1" => "Dang cho xac nhan", "2" => "Da duoc chon"];
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
 
         return $this->render('create', [
             'model' => $model,
+            'datamh' => $datamh,
+            'datakv' => $datakv, 
+            'datach' => $datach,
+            'datatt' => $datatt
         ]);
     }
 
@@ -85,13 +101,26 @@ class LopdayController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $mMH = new Monhoc();
+        $mKV = new Khuvuc();
+        $mCH = new Caphoc();
+
+        $datamh = ArrayHelper::map($mMH->getAll(), 'id', 'monhoc');
+        $datakv = ArrayHelper::map($mKV->getAll(), 'id', 'khuvuc');
+        $datach = ArrayHelper::map($mCH->getAll(), 'id', 'caphoc');
+        
+        $datatt = ["0" => "Cho nhan", "1" => "Dang cho xac nhan", "2" => "Da duoc chon"];
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'datamh' => $datamh,
+            'datakv' => $datakv, 
+            'datach' => $datach,
+            'datatt' => $datatt
         ]);
     }
 

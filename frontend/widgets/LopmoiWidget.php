@@ -3,7 +3,7 @@ namespace frontend\widgets;
 
 use yii\base\Widget;
 use yii\helpers\Html;
-use frontend\models\Loaibds;
+use frontend\models\Lopday;
 
 class LopmoiWidget extends Widget
 {
@@ -17,10 +17,12 @@ class LopmoiWidget extends Widget
 
     public function run()
     {
-        //$loai = new Loaibds();
-        //$dataloai = $loai->getAllLoaibds();
-        //return $this->render('TopNavWidget', ['dataloai' => $dataloai]);
-        return $this->render('LopmoiWidget');
+        $lop = new Lopday();
+        $dslopmoi = $lop->getLopmoi(20);
+        // print "<pre>";
+        // print_r($dslopmoi);
+        // print "</pre>"; exit;
+        return $this->render('LopmoiWidget', ['dslopmoi' => $dslopmoi]);
     }
 }
 ?>

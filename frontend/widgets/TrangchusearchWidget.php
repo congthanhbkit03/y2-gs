@@ -3,7 +3,7 @@ namespace frontend\widgets;
 
 use yii\base\Widget;
 use yii\helpers\Html;
-use frontend\models\Loaibds;
+use frontend\models\Khuvuc;
 
 class TrangchusearchWidget extends Widget
 {

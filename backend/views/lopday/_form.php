@@ -12,11 +12,23 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'monhoc_id')->textInput() ?>
+    <?= $form->field($model, 'monhoc_id')->dropDownList($datamh, [
+        'prompt' => '--Chon mon hoc--'
+     ]);
 
-    <?= $form->field($model, 'caphoc_id')->textInput() ?>
+    ?>
 
-    <?= $form->field($model, 'khuvuc_id')->textInput() ?>
+    <?= $form->field($model, 'caphoc_id')->dropDownList($datach, [
+        'prompt' => '--Chon cap hoc--'
+     ]);;
+
+    ?>
+
+    <?= $form->field($model, 'khuvuc_id')->dropDownList($datakv, [
+        'prompt' => '--Chon khu vuc--'
+     ]);
+
+    ?>
 
     <?= $form->field($model, 'diachi')->textInput(['maxlength' => true]) ?>
 
@@ -32,12 +44,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sdtnguoidk')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'trangthai')->textInput() ?>
+    <?= $form->field($model, 'trangthai')->dropDownList($datatt, [
+        'prompt' => '--Chon trang thai--'
+     ]); ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
+    
+
+<?php $this->registerJsFile('backend/web/js/checkall.js', ['depends' => [backend\assets\AppAsset::className()]]); ?> 
+
+
 
 </div>

@@ -2,9 +2,10 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use frontend\assets\AppAsset; 
-use frontend\models\Bds;
-use frontend\models\Loaibds;
-use frontend\models\District;
+use frontend\models\Caphoc;
+use frontend\models\Monhoc;
+use frontend\models\Khuvuc;
+use frontend\models\Lopday;
 use yii\helpers\ArrayHelper;
 $hinhanh = AppAsset::register($this)->baseUrl . '/frontend/web/img';
 ?>
@@ -16,19 +17,20 @@ $hinhanh = AppAsset::register($this)->baseUrl . '/frontend/web/img';
              
             <div class="search-form wow pulse" data-wow-delay="0.8s">
 
-                <form action="<?= Yii::$app->homeUrl?>bds/search" method="post" class=" form-inline">
+                <form action="<?= Yii::$app->homeUrl?>lopday/search" method="post" class=" form-inline">
                     <input type="hidden" name="_csrf" value="<?=Yii::$app->request->getCsrfToken()?>" />
                     
                     
                     <div class="form-group">    
                       <?php
-                        $dataHuyen = District::find()->asArray()->where('provinceid=51')->all();
+                        $dataHuyen = Khuvuc::find()->asArray()->all();
                         
                       ?>                              
-                        <select id="slHuyen" name="slHuyen" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Chọn huyện">
+                        <select id="slkv" name="slkv" class="selectpicker show-tick form-control ">
+                            <option value=""> - Chon Khu vuc - </option>
                             <?php foreach ($dataHuyen as $huyen) { ?>
-
-                              <option value="<?=$huyen['districtid']?>"><?=$huyen['name']?></option>
+                              
+                              <option value="<?=$huyen['id']?>"><?=$huyen['khuvuc']?></option>
                             <?php } ?>
                             
                             
@@ -36,24 +38,24 @@ $hinhanh = AppAsset::register($this)->baseUrl . '/frontend/web/img';
                     </div>
 
                     <div class="form-group">    
-                        <?php $dataLoai = Loaibds::find()->asArray()->all(); ?>                                 
-                        <select name = "slLoai" id="slLoai" class="selectpicker show-tick form-control" >
-                            <option value=""> - Chon Mon hoc - </option>
-                          <?php foreach ($dataLoai as $loai) { ?>
+                        <?php $dataCH = Caphoc::find()->asArray()->all(); ?>                                 
+                        <select name = "slch" id="slch" class="selectpicker show-tick form-control" >
+                            <option value=""> - Chon Cap hoc - </option>
+                          <?php foreach ($dataCH as $ch) { ?>
                             
-                            <option value="<?=$loai['id']?>"><?=$loai['tenloai']?> </option>
+                            <option value="<?=$ch['id']?>"><?=$ch['caphoc']?> </option>
                             
                           <?php } ?>
                         </select>
                     </div>
                     
                     <div class="form-group">    
-                        <?php $dataLoai = Loaibds::find()->asArray()->all(); ?>                                 
-                        <select name = "slLoai" id="slLoai" class="selectpicker show-tick form-control" >
-                            <option value=""> - Chon Cap hoc - </option>
-                          <?php foreach ($dataLoai as $loai) { ?>
+                        <?php $dataMH = Monhoc::find()->asArray()->all(); ?>                                 
+                        <select name = "slmh" id="slmh" class="selectpicker show-tick form-control" >
+                            <option value=""> - Chon Mon hoc - </option>
+                          <?php foreach ($dataMH as $mh) { ?>
                             
-                            <option value="<?=$loai['id']?>"><?=$loai['tenloai']?> </option>
+                            <option value="<?=$mh['id']?>"><?=$mh['monhoc']?> </option>
                             
                           <?php } ?>
                         </select>

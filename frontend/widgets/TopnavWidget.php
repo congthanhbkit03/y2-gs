@@ -17,9 +17,10 @@ class TopnavWidget extends Widget
 
     public function run()
     {
-        $loai = new Loaibds();
-        $dataloai = $loai->getAllLoaibds();
-        return $this->render('TopNavWidget', ['dataloai' => $dataloai]);
+        //$loai = new Loaibds();
+       // $dataloai = $loai->getAllLoaibds();
+        //return $this->render('TopNavWidget', ['dataloai' => $dataloai]);
+        return $this->render('TopNavWidget');
     }
 }
 ?>
