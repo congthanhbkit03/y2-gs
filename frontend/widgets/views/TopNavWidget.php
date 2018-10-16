@@ -58,7 +58,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="lbox" style="background-color: red">Danh cho phu huynh - hoc sinh</div>
-            <div class="lbox" style="background-color: green">Dang ky tim gia su</div>
+            <a href="<?= Yii::$app->homeUrl?>hssv/danglop"><div class="lbox" style="background-color: green">Dang ky tim gia su</div></a>
             <div class="lbox" style="background-color: blue">Lien he: 0909090909</div>
         </div>
         <div class="col-md-6">
@@ -90,7 +90,7 @@
         </div>
         <div class="col-md-3">
             <div class="lbox" style="background-color: red">Danh cho giao vien - sinh vien</div>
-            <div class="lbox" style="background-color: green">Dang ky tim lop</div>
+            <a href="<?= Yii::$app->homeUrl?>giasu/dangky"><div class="lbox" style="background-color: green">Dang ky tim lop</div></a>
             <div class="lbox" style="background-color: blue">Lien he: 0909090909</div>
         </div>
     </div>
