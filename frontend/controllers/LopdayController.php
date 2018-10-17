@@ -8,7 +8,11 @@ class LopdayController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $lopday = new Lopday();
+        $data = $lopday->getAll();
+        return $this->render('index', [
+            'data' => $data
+        ]);
     }
 
     public function actionSearch(){

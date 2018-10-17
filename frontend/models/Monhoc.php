@@ -61,4 +61,9 @@ class Monhoc extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Lopday::className(), ['monhoc_id' => 'id']);
     }
+
+    function getAll(){
+        $data = Monhoc::find()->asArray()->all();
+        return $data;
+    }
 }

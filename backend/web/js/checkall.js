@@ -1,5 +1,11 @@
 $(document).ready(function(){
-	$('#checkAll').change(function(){
+	$('#checkAll1').change(function(){
       $('.mh').prop('checked',this.checked?'checked':'');
-    })
+    });
+	$('#checkAll2').change(function(){
+      $('.ch').prop('checked',this.checked?'checked':'');
+    });
+    $('#checkAll3').change(function(){
+      $('.kv').prop('checked',this.checked?'checked':'');
+    });
 })

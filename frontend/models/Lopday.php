@@ -121,4 +121,10 @@ class Lopday extends \yii\db\ActiveRecord
          $data = $sql->all();
          return $data;
     }
+
+    public function getAll(){
+        $data = Lopday::find()->where(['trangthai' => 0])->all();
+
+        return $data;
+    }
 }
