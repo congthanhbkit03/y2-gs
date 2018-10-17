@@ -28,6 +28,7 @@ class m181009_149999_create_giasu extends Migration
             'anhcmnd' => $this->string(),
             'email' => $this->string(),
             'sdt' => $this->string(),
+            'matkhau' => $this->string(),
             'svtruong' => $this->string(),
             'gvtruong' => $this->string(),
             'nganhhoc' => $this->string(),
