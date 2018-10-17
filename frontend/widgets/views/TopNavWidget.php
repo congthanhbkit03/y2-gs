@@ -60,6 +60,7 @@
             <div class="lbox" style="background-color: red">Danh cho phu huynh - hoc sinh</div>
             <a href="<?= Yii::$app->homeUrl?>hssv/danglop"><div class="lbox" style="background-color: green">Dang ky tim gia su</div></a>
             <div class="lbox" style="background-color: blue">Lien he: 0909090909</div>
+            <div class="lbox"><a href="<?= Yii::$app->homeUrl?>giasu"><img src="<?= Yii::$app->homeUrl?>images/gia-su-hien-co.gif.jpg" alt=""></a></div>
         </div>
         <div class="col-md-6">
             <div id="carousel-id" class="carousel slide" data-ride="carousel">
@@ -92,6 +93,7 @@
             <div class="lbox" style="background-color: red">Danh cho giao vien - sinh vien</div>
             <a href="<?= Yii::$app->homeUrl?>giasu/dangky"><div class="lbox" style="background-color: green">Dang ky tim lop</div></a>
             <div class="lbox" style="background-color: blue">Lien he: 0909090909</div>
+            <div class="lbox"><a href="<?= Yii::$app->homeUrl?>lopday"><img src="<?= Yii::$app->homeUrl?>images/lop-day-hien-co.gif.jpg" alt=""></a></div>
         </div>
     </div>
 </div>

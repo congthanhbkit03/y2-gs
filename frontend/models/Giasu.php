@@ -111,5 +111,9 @@ class Giasu extends \yii\db\ActiveRecord
         return $this->hasMany(Phanlop::className(), ['giasu_id' => 'id']);
     }
 
+    public function getAll(){
+        $data = Giasu::find()->where(['trangthai'=>1])->all();
 
+        return $data;
+    }
 }

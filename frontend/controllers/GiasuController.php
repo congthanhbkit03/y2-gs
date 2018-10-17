@@ -16,7 +16,12 @@ class GiasuController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $gs = new Giasu();
+        $datags = $gs->getAll();
+
+        return $this->render("index", [
+            "data" => $datags
+        ]);
     }
 
     public function actionDangky(){
@@ -52,7 +57,7 @@ class GiasuController extends \yii\web\Controller
             // exit;
             if ($giasu->validate()){
                 $path = Url::to('@webfront/uploads/giasu/');
-                $pathcsdl = Url::base(true).'/uploads/giasu/';
+                $pathcsdl = '/uploads/giasu/';
                 //luu duong dan den file anh
                 $giasu->anh = $pathcsdl.$giasu->fanh->baseName.'.'.$giasu->fanh->extension;
                 $giasu->anhcmnd = $pathcsdl.$giasu->fanhcmnd->baseName.'.'.$giasu->fanhcmnd->extension;
@@ -126,4 +131,13 @@ class GiasuController extends \yii\web\Controller
     		"khuvuc" => $khuvuc
     	]);
     }
+
+    // public function actionDanhsach(){
+    //     $gs = new Giasu();
+    //     $datags = $gs->getAll();
+
+    //     return $this->render("index", [
+    //         "data" => $datags
+    //     ]);
+    // }
 }
