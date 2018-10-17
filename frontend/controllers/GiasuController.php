@@ -105,7 +105,7 @@ class GiasuController extends \yii\web\Controller
                             }
                         }                   
                     }
-                    return $this->redirect(['index']);
+                    return $this->redirect(['site/index']);
                 }
             } else {
                 //loi bao loi o day
